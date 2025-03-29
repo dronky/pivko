@@ -5,93 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Our Beer Factory</title>
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f4f4f9;
             color: #333;
-        }
-
-        header {
-            background-color: #ffbe0b;
-            color: white;
             text-align: center;
+        }
+        header {
+            background-color: #ffcc00;
             padding: 20px;
         }
-
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            color: #fff;
         }
-
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
+        main {
+            padding: 20px;
         }
-
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            background-image: url('https://via.placeholder.com/1500x500'); /* Replace with your brewery image */
-            background-size: cover;
-            background-position: center;
-            color: white;
+        .donation-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-        }
-
-        .about {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .about h3 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .about p {
-            font-size: 1.1em;
-            line-height: 1.6em;
-        }
-
-        .donate-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #ffbe0b;
-            color: white;
-        }
-
-        .donate-section h3 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .donate-section p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .donate-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #333333; /* Button color */
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
+        .donation-form input,
+        .donation-form button {
+            width: calc(100% - 20px);
+            margin-bottom: 15px;
+            padding: 10px;
             border-radius: 5px;
+            border: 1px solid #ccc;
         }
-
+        .donation-form button {
+            background-color: #ffcc00;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .donation-form button:hover {
+            background-color: #e6b800;
+        }
         footer {
-            text-align:center;padding
-        padding-top
-        ``
+            margin-top: 20px;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Support Our Beer Factory</h1>
+</header>
+<main>
+    <p>Your donation helps us craft the finest beer!</p>
+
+    <!-- Donation Form -->
+    <div class="donation-form">
+        <form action="thankyou.html" method="post">
+            <label for="cc-amount">Credit Card Donation ($):</label>
+            <input type="number" id="cc-amount" name="cc-amount" min="1" required placeholder="Enter amount">
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required placeholder="1234-5678-9012-3456">
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="month" id="expiry-date" name="expiry-date" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required placeholder="123">
+
+            <button type="submit">Donate via Credit Card</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 Beer Factory. All rights reserved.
+</footer>
+</body>
+</html>
